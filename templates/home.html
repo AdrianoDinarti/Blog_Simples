@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Blog Simples{% endblock %}
+
+{% block content %}
+  <h2>Posts Recentes</h2>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="{{ url_for('post', id=post.id) }}">{{ post.titulo }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

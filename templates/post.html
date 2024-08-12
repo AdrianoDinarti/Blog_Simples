@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.titulo }} - Blog Simples{% endblock %}
+
+{% block content %}
+  <h2>{{ post.titulo }}</h2>
+  <p>{{ post.conteudo }}</p>
+  <a href="{{ url_for('editar_post', id=post.id) }}">Editar</a>
+  <a href="{{ url_for('deletar_post', id=post.id) }}">Deletar</a>
+  <a href="{{ url_for('home') }}">Voltar</a>
+{% endblock %}
